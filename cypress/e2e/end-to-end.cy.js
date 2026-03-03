@@ -9,11 +9,9 @@ describe('Teste End-to-End: Cadastro e Login no Hub de Leitura', () => {
         const telefone = '11987654321'
         const senha = 'Teste@123'
 
-        cy.visit('/register')
         cy.cadastro(nome, email, telefone, senha)
         cy.get('#user-name').should('contain', nome)
 
-        cy.visit('/login')
         cy.login(email, senha)
         cy.get('#user-name').should('contain', nome)
     });
