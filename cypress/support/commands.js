@@ -29,5 +29,17 @@ Cypress.Commands.add('login', (email, senha) => {
     cy.get('#password').type(senha, {log: false})
     cy.get('#login-btn').click()
     cy.url().should('include', 'dashboard')
- })
+})
+
+Cypress.Commands.add('cadastro', (nome, email, telefone, senha) => {
+    cy.get('#name').type(nome)
+    cy.get('#email').type(email)
+    cy.get('#phone').type(telefone)
+    cy.get('#password').type(senha)
+    cy.get('#confirm-password').type(senha)
+    cy.get('#terms-agreement').check()
+    cy.get('#register-btn').click()
+    cy.url().should('include', 'dashboard')
+})
+
 
