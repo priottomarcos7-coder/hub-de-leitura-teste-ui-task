@@ -4,29 +4,30 @@
 
 Projeto de automação de testes de interface para o Hub de Leitura, desenvolvido durante a formação em Engenharia de Qualidade de Software.
 
-Neste projeto desenvolvi testes end-to-end para validar fluxos da aplicação, buscando identificar falhas de comportamento e reduzir riscos de regressão.
+Neste projeto desenvolvi testes end-to-end para validar fluxos da aplicação e reduzir riscos de regressão.
 
 ## O que desenvolvi
 
 - Estruturação de testes E2E com Cypress.
 - Validação de fluxos críticos da interface.
-- Interação com elementos da aplicação e validação de resultados.
-- Organização dos cenários e dados de apoio.
-- Execução em modo interativo e headless.
+- Interação com elementos da aplicação e validação dos resultados.
+- Uso de dados de teste e organização dos cenários.
+- Execução dos testes em modo interativo e headless.
 - Investigação de problemas de seletores, sincronização e configuração do ambiente.
 
 ## Tecnologias
 
-- Cypress
+- Cypress 14.5.4
 - JavaScript
 - Node.js
+- Faker.js
 - Git e GitHub
 
 ## Pré-requisitos
 
 - Node.js e npm instalados.
 - Git instalado.
-- Aplicação Hub de Leitura disponível conforme a configuração do projeto.
+- Aplicação Hub de Leitura disponível conforme a configuração utilizada pelos testes.
 
 ## Instalação
 
@@ -38,15 +39,19 @@ npm install
 
 ## Execução
 
-```bash
-npx cypress open
-```
-
-Para execução headless:
+Execução dos testes em Chrome:
 
 ```bash
-npx cypress run
+npm test
 ```
+
+Abertura da interface do Cypress:
+
+```bash
+npm run cy:open
+```
+
+O projeto também possui o script `cy:report` para execução com gravação no Cypress Cloud, quando configurado com credenciais válidas.
 
 ## Estratégia de testes
 
@@ -62,12 +67,13 @@ cypress/
 
 cypress.config.js
 package.json
+run-cypress.js
 README.md
 ```
 
 ## Resultado esperado
 
-O Cypress apresenta os cenários aprovados e eventuais falhas, permitindo investigar o comportamento da aplicação.
+O Cypress apresenta o resultado de cada cenário, permitindo identificar testes aprovados e falhas que precisam de investigação.
 
 ## Repositório
 
