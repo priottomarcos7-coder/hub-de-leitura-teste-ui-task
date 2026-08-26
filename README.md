@@ -1,54 +1,80 @@
-#Projeto de Testes -  Hub de Leitura
+# Automação de UI com Cypress — Hub de Leitura
 
-## Sobre
-Projeto de testes para a aplicação "Hub de Leitura". Este repositório contém a interface e/ou testes automatizados para validação da aplicação.
+## Objetivo
+
+Projeto de automação de testes de interface para o Hub de Leitura, desenvolvido durante a formação em Engenharia de Qualidade de Software.
+
+Neste projeto desenvolvi testes end-to-end para validar fluxos da aplicação, buscando identificar falhas de comportamento e reduzir riscos de regressão.
+
+## O que desenvolvi
+
+- Estruturação de testes E2E com Cypress.
+- Validação de fluxos críticos da interface.
+- Interação com elementos da aplicação e validação de resultados.
+- Organização dos cenários e dados de apoio.
+- Execução em modo interativo e headless.
+- Investigação de problemas de seletores, sincronização e configuração do ambiente.
+
+## Tecnologias
+
+- Cypress
+- JavaScript
+- Node.js
+- Git e GitHub
 
 ## Pré-requisitos
-- Git
-- Node.js (recomendado >= 14)
 
-## Como clonar
-1. Abra o terminal.
-2. Clone o repositório:
-    - git clone <URL-DO-REPOSITORIO>
-3. Acesse a pasta do projeto:
-    - cd <NOME-DO-REPOSITORIO>
+- Node.js e npm instalados.
+- Git instalado.
+- Aplicação Hub de Leitura disponível conforme a configuração do projeto.
 
-## Instalar dependências
-- Usando npm:
-  - npm install
+## Instalação
 
+```bash
+git clone https://github.com/priottomarcos7-coder/hub-de-leitura-teste-ui-task.git
+cd hub-de-leitura-teste-ui-task
+npm install
+```
 
-## Executar em desenvolvimento
-- npm run dev
-ou
-- npm start
-(A opção exata depende dos scripts definidos em package.json; verifique-os se necessário.)
+## Execução
 
-Abra o navegador em http://localhost:3000 (ou a porta indicada no terminal).
+```bash
+npx cypress open
+```
 
-## Rodar testes
-- Testes unitários:
-  - npm test
-- Testes end-to-end (se houver, ex.: Cypress):
-  - npx cypress open
-  - npx cypress run
+Para execução headless:
 
-Verifique os scripts em package.json para nomes específicos (por exemplo, test:unit, test:e2e).
+```bash
+npx cypress run
+```
 
-## Build para produção
-- npm run build
+## Estratégia de testes
 
-Os artefatos serão gerados na pasta indicada pelo projeto (ex.: dist, build).
+A estratégia prioriza fluxos críticos da interface e cenários capazes de detectar regressões. Durante o desenvolvimento foram analisados seletores, sincronização e comportamento dos testes.
 
-## Variáveis de ambiente
-Se houver um arquivo exemplo (.env.example), copie para .env e ajuste conforme necessário:
-- cp .env.example .env
+## Estrutura
 
-## Contribuição
-- Abra issues para bugs ou melhorias.
-- Envie pull requests com descrições claras das mudanças.
+```text
+cypress/
+├── e2e/
+├── fixtures/
+└── support/
 
-## Ajuda / Problemas comuns
-- Atualize dependências: rm -rf node_modules && npm install
-- Verifique a versão do Node.js se algum pacote não compilar.
+cypress.config.js
+package.json
+README.md
+```
+
+## Resultado esperado
+
+O Cypress apresenta os cenários aprovados e eventuais falhas, permitindo investigar o comportamento da aplicação.
+
+## Repositório
+
+https://github.com/priottomarcos7-coder/hub-de-leitura-teste-ui-task
+
+## Autor
+
+Marcos Priotto
+
+Projeto desenvolvido como parte da formação em Engenharia de Qualidade de Software na EBAC.
